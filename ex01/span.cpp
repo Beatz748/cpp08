@@ -49,7 +49,16 @@ int Span::shortestSpan()
 		throw NoEnoughElementsException();
 
 	std::sort(_arr.begin(), _arr.end());
-	return (_arr[1] - _arr[0]);
+	std::vector<int>::const_iterator t1;
+	t1 = _arr.begin();
+	t1++;
+	int r = std::abs(*t1 - *(t1 - 1));
+    while (++t1 < _arr.end())
+		{
+        if(std::abs(*t1 - *(t1 - 1)) < r)
+            r = std::abs(*t1 - *(t1 - 1));
+    }
+	return (r);
 }
 
 

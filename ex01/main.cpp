@@ -51,7 +51,6 @@ int main(){
     for (int i = 0; i < 10200; i++){
         v.push_back(i);
     }
-    std::cout << "UIJPIEURHGJFIOUERGPER";
     try{
         span_2.addNumber(v.begin(), v.end());
     }
@@ -73,7 +72,6 @@ int main(){
     catch (Span::NoEnoughElementsException const &ex){
         std::cout << ex.what() << std::endl;
     }
-
 
     return 0;
 };
